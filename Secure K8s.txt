@@ -1,0 +1,47 @@
+Secure k8s
+
+1.Secure your api server
+2.RBAC
+3.Network policies
+4.Encrypted at rest ETCD
+5.Secure container
+6. Cluster monitoring
+7. Frequent upgrade
+
+
+1.Secure your api server 
+Need high availability - like 3 master nodes
+
+ everyone can access your cluster or hack using api server
+ so tls certificates required for secure your applications
+ like https --
+ tls cerificates can be add using adding in mydaddy
+ 
+---
+so kubectl get pods
+kube-apiserver
+using kube-system namespace
+ using pod.yaml with below config
+ spec:
+ container
+ tls certificates
+ private
+ client
+ 
+ ---
+ restrict the access RBAC -role based access control
+ depending on the role 
+ service/role/cluster role binding
+ 
+ xyz user -accesing the cluster - create a cluster role and give resource level access like set and watch the pods
+ 
+ 
+ 2. RBAC
+ service account -- give the access to the services like configmap/jenkins/ or any other service required to access ur k8s cluster 
+ users- need to access the k8s cluster 
+ 
+ rbac is basically like act as a IAM users/groups
+  role
+  cluster role binding
+  
+  3. network policies

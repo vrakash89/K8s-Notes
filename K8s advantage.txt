@@ -1,0 +1,30 @@
+K8s
+
+1.K8s is in Cluster in nature
+generally installed ass a cluster (group of nodes)
+
+so when one of the container is using high cpu it will affect other container load will split---> 
+
+so k8s will solve it --> if any faulty node something like cpu issue it will automatically chnage the node ---asign the application to other node
+
+2. Autoscaling-- when ever the container need to increase the container and split the load like load balancing --
+k8s there is feature called HPA horizontal pod autoscaling --it will increse it automatically
+
+3.Auto healing
+
+k8s controls and fix the damage--> container is going down--> Auto healing using this feature even before container goes down it will 
+ create or restart the containers --api server will rollout new a container --end use will not get to know container has goes down recreated
+ 
+4.Enterprise levl support - origanated from google--parts of borg -->
+
+Enterprise levl container orchestration platform--docker doens have the capabilities so docker will do do in producation since its not a enterprise level support
+
+basically roundrobin extend to any level
+custom resources/ u install ur lb from side 
+
+podman promethues in cncf -k8s community or tools in k8s
+
+by default not support advanced level load balancing --ingress--create k8s controlleer and use lb --ingress
+
+
+

@@ -1,0 +1,35 @@
+k8s architecture
+----------------
+A container need to run requires a container run time --In docker container run time called as dockerstim
+
+2 prts of k8s --> Control plane and data plane
+
+A pod to deploy in k8s need to execute through master and it will get deployed in worker node
+
+there is a component called kubelet -->resposible to run the pod kubelet used here --> need to maintain the k8s pod (kubelet)
+
+kubelet will inform whether the pod is down or up----feature on auto healing 
+
+even u have a container need to run need the container runtime
+
+docker is not mandatory in k8s , it can use container-d ,dockerstim or crio-o 
+
+similarly in docker default networking used bridge or docker 0 ...similarly in k8s used kube proxy basically provides networkiing 
+it provides ip address,load balancing 
+
+50 request go to one node and other node will decide by kube proxy  --also uses ip tables
+
+
+Matser node or Control plane
+ -- why we need --> in k8s need to install pod on which node --who will take the deciosn when multiple users comes--> so there k8s uses api servers 
+that comes in master node --> k8s exposes to external worls --heart of k8s taking the request from the exteranl world --API server decides and scheduler will acts
+
+So how to schedule ur pods --Sceduler will scheduleur pods --> API server decides and scheduler will acts
+similiaryly it will schedule to node 1 or node
+
+ETCD --store backup ---> ETCD is a key value store---stores cluster information like subnet/configmaps/secrets 
+
+Controller Manager-- Need to do auto scaling or need to control using controllers(eg: replicaset- maninting state of k8s cluster..like need 2 pods)
+that controlers managing or runnning will make sure is called as a controler manager
+
+Cloud Controller manager-->

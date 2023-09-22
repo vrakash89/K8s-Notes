@@ -1,0 +1,18 @@
+K8s Orchestration -background
+
+Docker is ephmeral in nature
+1.Single host ---> if a single contains multiple containers like 100- incase one of the conatainer is exhausted the memory it will affect each other---so disavandtage of docker
+
+2.Auto healing is not happening in docker
+since user killed container -->app--> not accessible-->auto healing not happening --container not coming automatically
+100 reason of container can go down--doevops engineer cant monitor 1000s containers
+
+3.Auto scaling not do in docker
+
+example 1 container having 4 cpu /4gb ram--> suddenly when the occasion comes xmas so user increased from 10000 to 1lakhs- so automaticaally it will increase
+
+manually increase container from 1 to 10 containers or automatically -- so if 2 container or 3--it should do load balancing -
+automatically its not hapeening in docker -manually we can increase the count
+
+4.Enterprise level support
+Docker doesnt support --> Enterprise level support (without load balance/firewall/auto healing/healing/api gateway)

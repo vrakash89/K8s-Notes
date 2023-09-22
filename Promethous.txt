@@ -1,0 +1,80 @@
+Promethues/grafan
+
+It can be used Data source
+ Components
+ service discovery 
+ k8s & file sd
+ 
+ prometheus alerting
+ alert manager --> NOTIFY --> pagerduty -->email-->etc
+ 
+ 
+ promethus server
+ retrieval -->tsdb -->http server
+               |
+nODE          HDD/SSD
+
+SHORT LIVED JOBS
+PUSH METRICS AT EXIT
+PUSH GATEWAY
+
+PULL METRICS
+
+JOBS/EXPORTERS
+
+prometheus
+grafana
+api clients
+
+promethus will push the alert using alert manager and push the alert to slack/email
+ 
+ api flacky behavior --alert manager ---configured gmeet/slack/email will push notification to these
+ 
+ promethus ui -executes --promethues queries
+ 
+ promethus api command--
+ 
+ grafana data visualization and retries the info from prometheus get in to grafana inside grafana we can create diagrams
+ 
+ "" minikube start --memory=4098 --driver=hyperkit 
+ 
+ kubectl get pods -A
+ 
+ helm/operator can be used --want to upgrade ur cluster opeartor will do 
+ 
+ helm repo update
+ helm repo add promethus community https://github/helm-charts page
+ 
+ helm install promethues promethus-community/prometheus
+ 
+ kubectl get pods
+ 
+ kube state controller --whn u call metric endpoint it will give ur extisting k8s cluster
+ 
+ kubectl get svc
+ 
+ 
+ expose service prometheus-server --type=NodePort target port --name=
+ 
+ minikube ip
+ 
+ try accessing https://192.168.23.4:3100
+ 
+ queries can give u the metrics part like  execute --info about cluster k8s --metrics are exposed by ap server
+ 
+ abc application want to get the health check /liveness probe any details of application 
+ 
+ api server or --develop should write promethues metrics libraray
+ 
+ inside the configmap 
+ 
+ aprt from the metrics
+ 
+ developer created deployed --apart from the default metrics  need aditional  cubestat metrics
+ 
+ 
+ prometheus state metrics
+ 
+ 
+ helm grafana grafana\grafana
+ 
